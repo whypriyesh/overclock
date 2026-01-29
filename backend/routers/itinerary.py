@@ -56,10 +56,13 @@ class SaveItineraryRequest(BaseModel):
 
 
 @router.post("/itinerary/generate", response_model=ItineraryResponse)
-async def create_itinerary(request: ItineraryRequest):
+async def create_itinerary(
+    request: ItineraryRequest,
+    user_id: str = Depends(get_current_user)
+):
     """
     Generate a day-wise itinerary using Groq LLM.
-    Includes retry logic and output validation.
+    Requires authentication to prevent abuse.
     """
     logger.info(f"Generating itinerary for {request.destination}, {request.days} days")
     
