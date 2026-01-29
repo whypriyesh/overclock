@@ -1,0 +1,194 @@
+[
+    {
+        "id": "goa",
+        "name": "Goa",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800",
+        "tags": [
+            "beach",
+            "party",
+            "budget"
+        ],
+        "base_cost_per_day": 3000,
+        "description": "Sun, sand, and vibrant nightlife on India's western coast.",
+        "best_for": [
+            "couples",
+            "friends",
+            "solo"
+        ],
+        "activities": [
+            "beaches",
+            "water sports",
+            "nightlife",
+            "heritage tours"
+        ]
+    },
+    {
+        "id": "manali",
+        "name": "Manali",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
+        "tags": [
+            "mountains",
+            "adventure",
+            "nature"
+        ],
+        "base_cost_per_day": 2500,
+        "description": "Gateway to the Himalayas with stunning mountain views.",
+        "best_for": [
+            "adventure",
+            "couples",
+            "family"
+        ],
+        "activities": [
+            "trekking",
+            "paragliding",
+            "river rafting",
+            "snow sports"
+        ]
+    },
+    {
+        "id": "jaipur",
+        "name": "Jaipur",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800",
+        "tags": [
+            "heritage",
+            "culture",
+            "shopping"
+        ],
+        "base_cost_per_day": 2800,
+        "description": "The Pink City with magnificent forts and palaces.",
+        "best_for": [
+            "family",
+            "couples",
+            "culture"
+        ],
+        "activities": [
+            "palace tours",
+            "shopping",
+            "photography",
+            "food tours"
+        ]
+    },
+    {
+        "id": "kerala",
+        "name": "Kerala",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+        "tags": [
+            "nature",
+            "relaxation",
+            "backwaters"
+        ],
+        "base_cost_per_day": 4000,
+        "description": "God's Own Country with serene backwaters and lush greenery.",
+        "best_for": [
+            "couples",
+            "family",
+            "relaxation"
+        ],
+        "activities": [
+            "houseboat stays",
+            "ayurveda",
+            "wildlife",
+            "tea plantations"
+        ]
+    },
+    {
+        "id": "rishikesh",
+        "name": "Rishikesh",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1600240556024-2e57ff4c3d5e?w=800",
+        "tags": [
+            "adventure",
+            "spiritual",
+            "budget"
+        ],
+        "base_cost_per_day": 1800,
+        "description": "Yoga capital of the world with thrilling adventure sports.",
+        "best_for": [
+            "solo",
+            "adventure",
+            "spiritual"
+        ],
+        "activities": [
+            "river rafting",
+            "bungee jumping",
+            "yoga",
+            "temple visits"
+        ]
+    },
+    {
+        "id": "ladakh",
+        "name": "Ladakh",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1545389336-cf090694435e?w=800",
+        "tags": [
+            "mountains",
+            "adventure",
+            "offbeat"
+        ],
+        "base_cost_per_day": 5000,
+        "description": "Land of high passes with dramatic landscapes.",
+        "best_for": [
+            "adventure",
+            "solo",
+            "photography"
+        ],
+        "activities": [
+            "bike trips",
+            "monasteries",
+            "camping",
+            "stargazing"
+        ]
+    },
+    {
+        "id": "udaipur",
+        "name": "Udaipur",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1586957818547-a85f324e3c59?w=800",
+        "tags": [
+            "heritage",
+            "romantic",
+            "lakes"
+        ],
+        "base_cost_per_day": 3500,
+        "description": "City of Lakes with stunning royal architecture.",
+        "best_for": [
+            "couples",
+            "honeymoon",
+            "photography"
+        ],
+        "activities": [
+            "lake tours",
+            "palace visits",
+            "sunset views",
+            "boat rides"
+        ]
+    },
+    {
+        "id": "varanasi",
+        "name": "Varanasi",
+        "country": "India",
+        "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800",
+        "tags": [
+            "spiritual",
+            "culture",
+            "heritage"
+        ],
+        "base_cost_per_day": 2000,
+        "description": "One of the oldest living cities with spiritual significance.",
+        "best_for": [
+            "spiritual",
+            "culture",
+            "solo"
+        ],
+        "activities": [
+            "ghat visits",
+            "evening aarti",
+            "temple tours",
+            "boat rides"
+        ]
+    }
+]

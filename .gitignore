@@ -42,7 +42,7 @@ yarn-error.log
 *.swo
 
 # Local Data
-backend/data/
+
 *.sqlite3
 *.db
 
