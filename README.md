@@ -1,4 +1,4 @@
-# TripIt.Ai 🌍✈️
+# TripIt.Ai 🌍✈️ 
 
 **AI-Powered Travel Planning Platform**
 
