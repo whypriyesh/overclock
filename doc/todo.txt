@@ -1,0 +1,207 @@
+Stack: React (Vite) · FastAPI · Supabase · Groq LLM
+
+🧱 PHASE 0 — Project Skeleton (10–15 min)
+Repo Structure
+tripit-ai/
+├─ frontend/   (React + Vite)
+├─ backend/    (FastAPI)
+└─ README.md
+
+🎨 PHASE 1 — Frontend (React + Vite)
+1.1 Setup
+
+ Create Vite + React project
+
+ Install Tailwind CSS
+
+ Setup basic routing (React Router)
+
+1.2 Pages (Minimum Required)
+
+ Landing Page
+
+Hero section
+
+“Plan Your Trip with AI” CTA
+
+ Trip Planner Page
+
+Inputs:
+
+Budget
+
+Number of days
+
+Travel type
+
+Interest
+
+Submit → API call
+
+ Recommendations Page
+
+List of recommended destinations
+
+“Why this destination” explanation (AI-generated)
+
+CTA → Generate itinerary
+
+ Itinerary Page
+
+Day-wise itinerary view
+
+Cost breakdown
+
+Save itinerary button
+
+ Auth Pages
+
+Login
+
+Signup (Supabase)
+
+1.3 Frontend ↔ Backend Integration
+
+ Axios API client
+
+ Env-based API URL
+
+ Handle loading + error states
+
+🧠 PHASE 2 — Backend (FastAPI)
+2.1 Setup
+
+ Create FastAPI project
+
+ Enable CORS
+
+ Env-based config (Groq key, Supabase URL)
+
+2.2 Core APIs (DO NOT ADD MORE)
+Smart Destination Recommendation (🔥 Priority)
+
+ POST /recommendations
+
+Input:
+
+budget
+
+days
+
+travel_type
+
+interest
+
+Logic:
+
+Rule-based scoring
+
+Select top 3 destinations
+
+Output:
+
+destination
+
+score
+
+reason (AI)
+
+AI Itinerary Generator
+
+ POST /itinerary/generate
+
+Input: selected destination + user preferences
+
+Output:
+
+day-wise plan
+
+estimated cost
+
+tips
+
+Save & Fetch Itinerary
+
+ POST /itinerary/save
+
+ GET /itinerary/{id}
+
+🧠 PHASE 3 — AI Layer (Groq)
+3.1 What AI Does (STRICT)
+
+AI DOES NOT decide destinations.
+AI ONLY:
+
+Explains recommendations
+
+Generates itinerary text
+
+✔ Hackathon-safe
+✔ Explainable AI
+
+3.2 Groq Prompts
+Explanation Prompt
+Explain why {destination} is suitable for a {days}-day {travel_type} trip 
+with a budget of ₹{budget} and interest in {interest}.
+Keep it concise and practical.
+
+Itinerary Prompt
+Create a realistic {days}-day travel itinerary for {destination}.
+Include daily activities, local travel, food, and estimated daily cost.
+Return structured JSON.
+
+🗄️ PHASE 4 — Supabase Integration
+4.1 Authentication
+
+ Email/password auth
+
+ Protect itinerary save API
+
+ Store user_id with itinerary
+
+4.2 Database Tables
+itineraries
+
+id
+
+user_id
+
+destination
+
+preferences (JSON)
+
+ai_response (JSON)
+
+created_at
+
+4.3 Optional (If Time Left)
+
+ Supabase Storage for PDF export (future scope)
+
+🔗 PHASE 5 — Frontend ↔ Supabase
+
+ Supabase client setup in frontend
+
+ Auth context
+
+ Protect “Save Itinerary” button
+
+🧪 PHASE 6 — Demo Polish (30 min)
+
+ Seed destination data (JSON)
+
+ Add loading skeletons
+
+ One hardcoded demo user
+
+ Clean UI spacing & typography
+
+🎯 FINAL CHECKLIST (Judges)
+
+ AI recommendation with reasoning ✅
+
+ End-to-end flow works ✅
+
+ Clean UI, no broken links ✅
+
+ Explainable architecture ✅

@@ -1,0 +1,206 @@
+PRD — TripIT AI (Intelligent Tour & Travel Platform)
+1. Objective
+
+Build an AI-powered travel platform that allows users to discover destinations, generate personalized itineraries, and simulate bookings with transparent pricing — all in one flow.
+
+The platform must be AI-first, fast, and demo-ready.
+
+2. Problem
+
+Users face:
+
+Fragmented trip planning (multiple apps)
+
+Generic recommendations
+
+Hidden or unclear costs
+
+Time-consuming itinerary creation
+
+3. Solution
+
+An AI-driven web app where users describe their trip in natural language and instantly receive:
+
+A day-wise itinerary
+
+Cost breakdown
+
+Travel tips
+
+Editable plan
+
+Booking simulation
+
+4. Core Features (MVP Only)
+4.1 AI Trip Planner (Primary Feature)
+
+Input
+
+Destination
+
+Duration
+
+Budget
+
+Travelers
+
+Preferences (optional)
+
+Output (AI-generated)
+
+Day-wise itinerary
+
+Places & activities
+
+Estimated cost per day
+
+Total trip budget
+
+Travel tips
+
+4.2 Destination Discovery
+
+Predefined popular destinations
+
+Tags: Budget, Adventure, Family, Solo
+
+“Plan with AI” CTA
+
+4.3 Itinerary Editor
+
+Edit days / activities
+
+Re-generate via AI
+
+Save itinerary
+
+4.4 Transparent Pricing
+
+Clear cost breakdown:
+
+Stay
+
+Travel
+
+Food
+
+Activities
+
+Static refund & cancellation policy (for MVP)
+
+4.5 Booking Simulation
+
+Mock booking confirmation
+
+Shows final price and policies
+
+No real payment gateway
+
+5. AI Design
+Model
+
+Groq LLM (LLaMA / Mixtral)
+
+AI Responsibilities
+
+Generate realistic itineraries
+
+Stay within budget
+
+Produce structured JSON output
+
+AI Prompt (System)
+You are a professional travel planner.
+Generate realistic, budget-aware, day-wise itineraries.
+Include cost estimates and practical travel tips.
+Return structured JSON only.
+
+6. Tech Stack
+Frontend
+
+React
+
+Tailwind CSS
+
+Backend
+
+FastAPI
+
+REST APIs
+
+Database
+
+PostgreSQL
+
+AI
+
+Groq API
+
+7. API Endpoints
+POST /ai/itinerary/generate
+POST /itinerary/save
+GET  /itinerary/{id}
+GET  /destinations
+
+8. Data Models (Minimal)
+User
+
+id
+
+email
+
+Itinerary
+
+id
+
+user_id
+
+destination
+
+duration
+
+budget
+
+ai_response (JSON)
+
+created_at
+
+9. User Flow
+
+User opens app
+
+Enters trip details
+
+AI generates itinerary
+
+User edits or saves
+
+User clicks “Book Now”
+
+Booking confirmation screen
+
+10. Non-Functional Requirements
+
+Response time < 3 seconds
+
+Mobile-first UI
+
+Clear typography & contrast
+
+Simple language
+
+11. Hackathon Success Criteria
+
+AI is core to the product
+
+End-to-end working flow
+
+Clean UI
+
+Real-world usability
+
+Explainable architecture
+
+12. One-Line Pitch
+
+“TripIT AI plans complete trips in seconds — personalized, transparent, and stress-free.”

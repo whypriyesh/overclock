@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Creator</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="1200"></canvas>
+    <script>
+        const destinations = [
+            { name: 'Santorini', color1: '#4A90E2', color2: '#E8F0FF' },
+            { name: 'Bali', color1: '#2ECC71', color2: '#A8E6CF' },
+            { name: 'Swiss Alps', color1: '#34495E', color2: '#ECF0F1' },
+            { name: 'Maldives', color1: '#1ABC9C', color2: '#76D7C4' },
+            { name: 'Tokyo', color1: '#E74C3C', color2: '#F8C9D3' },
+            { name: 'Iceland', color1: '#3498DB', color2: '#AED6F1' },
+            { name: 'Dubai', color1: '#F39C12', color2: '#FAD7A0' },
+            { name: 'Paris', color1: '#9B59B6', color2: '#D7BDE2' },
+            { name: 'New York', color1: '#95A5A6', color2: '#D5DBDB' },
+            { name: 'Machu Picchu', color1: '#16A085', color2: '#A2D9CE' },
+            { name: 'Australia', color1: '#E67E22', color2: '#F5CBA7' },
+            { name: 'Norway', color1: '#2C3E50', color2: '#BDC3C7' }
+        ];
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        destinations.forEach((dest, index) => {
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, dest.color1);
+            gradient.addColorStop(1, dest.color2);
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = 'bold 60px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(dest.name, canvas.width / 2, canvas.height / 2);
+
+            // Create download link
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${index + 1}.jpg`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg', 0.9);
+        });
+    </script>
+</body>
+
+</html>
